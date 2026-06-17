@@ -188,6 +188,15 @@
 
     <!-- Navigation -->
     <nav>
+        <div class="logo">
+            <a href="#home" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text-light);">
+                <!-- Replace 'logo.png' with your actual image file name in GitHub -->
+                <img src="logo.png" alt="YB IT Solutions Logo" style="height: 38px; width: auto; object-fit: contain;">
+                <span style="font-size: 1.3rem; font-weight: 800; letter-spacing: 0.5px;">
+                    YB <span style="color: var(--teal-primary); font-weight: 400; font-size: 1.1rem;">IT SOLUTIONS</span>
+                </span>
+            </a>
+        </div>
         <div class="logo">YB <span>IT SOLUTIONS</span></div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
@@ -224,24 +233,30 @@
             </div>
         </div>
     </section>
-    <section class="services" id="contact">
-        <h2 class="section-title">Our <span>Expertise</span></h2>
-        <div class="services-grid">
-            <div class="card">
-                <div class="card-icon">⚡</div>
-                <h3>Cloud Architecture</h3>
-                <p>Seamless migration, management, and optimization for AWS, Azure, and Google Cloud systems.</p>
+
+<section class="services" id="contact" style="background-color: var(--bg-dark); border-top: 1px solid rgba(14, 165, 233, 0.1);">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <div class="services-grid" style="max-width: 900px; margin: 0 auto;">
+            
+            <!-- Email Card -->
+            <div class="card" style="text-align: center;">
+                <div class="card-icon">✉️</div>
+                <h3>Email Us</h3>
+                <p><a href="mailto: allajhong@gmail.com" style="color: var(--teal-primary); text-decoration: none; font-weight: 600;">allajhong@gmail.com / ybitsolutions23@gmai.com</a></p>
             </div>
-            <div class="card">
-                <div class="card-icon">🛡️</div>
-                <h3>Cybersecurity</h3>
-                <p>Advanced threat detection, zero-trust infrastructure, and continuous compliance monitoring.</p>
+            <!-- Phone Card -->
+            <div class="card" style="text-align: center;">
+                <div class="card-icon">📞</div>
+                <h3>Call Us</h3>
+                <p><a href="tel:+1234567890" style="color: var(--text-light); text-decoration: none;">+63 9975983908</a></p>
             </div>
-            <div class="card">
-                <div class="card-icon">💻</div>
-                <h3>Custom Software</h3>
-                <p>Tailored enterprise platforms designed to automate workflows and maximize team efficiency.</p>
+            <!-- Location Card -->
+            <div class="card" style="text-align: center;">
+                <div class="card-icon">📍</div>
+                <h3>Location</h3>
+                <p style="color: var(--text-muted);">Bagumbayan, Sultan Kudarat Philippines</p>
             </div>
+
         </div>
     </section>
 
