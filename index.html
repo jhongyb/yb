@@ -1,1 +1,234 @@
-<h1>YB IT SOLUTIONS</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YB IT Solutions | Modern Tech Architecture</title>
+    <style>
+        /* CSS Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --teal-primary: #0ea5e9; /* Vibrant Teal */
+            --teal-glow: rgba(14, 165, 233, 0.15);
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 10%;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(14, 165, 233, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-light);
+        }
+
+        .logo span {
+            color: var(--teal-primary);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--teal-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+            background: radial-gradient(circle at center, var(--teal-glow) 0%, transparent 70%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            color: var(--teal-primary);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn {
+            background-color: var(--teal-primary);
+            color: var(--bg-dark);
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(14, 165, 233, 0.5);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 10%;
+            background-color: rgba(30, 41, 59, 0.5);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .section-title span {
+            color: var(--teal-primary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--teal-primary);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: var(--teal-primary);
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">YB <span>IT SOLUTIONS</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Engineered for <span>Scale</span>.</h1>
+        <p>We deliver cutting-edge IT cloud infrastructure, cybersecurity systems, and bespoke software solutions to power your business.</p>
+        <a href="mailto:info@ybitsolutions.com" class="cta-btn">Let's Collaborate</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Our <span>Expertise</span></h2>
+        <div class="services-grid">
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Cloud Architecture</h3>
+                <p>Seamless migration, management, and optimization for AWS, Azure, and Google Cloud systems.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🛡️</div>
+                <h3>Cybersecurity</h3>
+                <p>Advanced threat detection, zero-trust infrastructure, and continuous compliance monitoring.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>Custom Software</h3>
+                <p>Tailored enterprise platforms designed to automate workflows and maximize team efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 YB IT SOLUTIONS. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
