@@ -342,6 +342,10 @@ nav {
     transform: translateX(-50%);
 }
 
+#slide-3:checked ~ .carousel-viewport .carousel-track {
+    transform: translateX(-100%);
+}
+
 .carousel-nav {
     display: flex;
     justify-content: center;
@@ -365,6 +369,12 @@ nav {
 
 #slide-1:checked ~ .carousel-nav label[for="slide-1"],
 #slide-2:checked ~ .carousel-nav label[for="slide-2"] {
+    background: var(--teal-bright);
+    box-shadow: 0 0 10px var(--teal-primary);
+    transform: scale(1.2);
+    border-color: var(--text-light);
+}
+#slide-3:checked ~ .carousel-nav label[for="slide-2"] {
     background: var(--teal-bright);
     box-shadow: 0 0 10px var(--teal-primary);
     transform: scale(1.2);
