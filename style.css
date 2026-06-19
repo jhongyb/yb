@@ -305,6 +305,7 @@ nav {
     display: none;
 }
 
+/* --- Update the Viewport, Track, and Slides --- */
 .carousel-viewport {
     position: relative;
     aspect-ratio: 16 / 9;
@@ -316,31 +317,37 @@ nav {
 
 .carousel-track {
     display: flex;
-    width: 200%; 
+    /* 5 slides means the track container must span 500% of the viewport */
+    width: 500%; 
     height: 100%;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .carousel-slide {
-    width: 50%; 
+    /* Each slide takes exactly 1/5th (20%) of the 500% track width */
+    width: 20%; 
     height: 100%;
     position: relative;
 }
 
-.carousel-slide iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Carousel Navigation Logic */
+/* --- Update Slide Shift Logic (Shifting frame by frame) --- */
 #slide-1:checked ~ .carousel-viewport .carousel-track { transform: translateX(0%); }
 #slide-2:checked ~ .carousel-viewport .carousel-track { transform: translateX(-20%); }
 #slide-3:checked ~ .carousel-viewport .carousel-track { transform: translateX(-40%); }
 #slide-4:checked ~ .carousel-viewport .carousel-track { transform: translateX(-60%); }
 #slide-5:checked ~ .carousel-viewport .carousel-track { transform: translateX(-80%); }
+
+/* --- Update Navigation Active Dot Indicator Logic --- */
+#slide-1:checked ~ .carousel-nav label[for="slide-1"],
+#slide-2:checked ~ .carousel-nav label[for="slide-2"],
+#slide-3:checked ~ .carousel-nav label[for="slide-3"],
+#slide-4:checked ~ .carousel-nav label[for="slide-4"],
+#slide-5:checked ~ .carousel-nav label[for="slide-5"] {
+    background: var(--teal-bright);
+    box-shadow: 0 0 10px var(--teal-primary);
+    transform: scale(1.2);
+    border-color: var(--text-light);
+}
 
 .carousel-nav {
     display: flex;
